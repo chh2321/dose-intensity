@@ -35,9 +35,30 @@
     margin-top: 12px; font-size: 12px; color: #6b7280; max-width: 780px;
     text-align: center; line-height: 1.7;
   }
+  .corner-mark {
+    position: fixed; top: 16px; left: 16px; z-index: 20;
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 6px 14px 6px 12px;
+    font-size: 13px; font-weight: 600; letter-spacing: 3px;
+    color: #ffffff;
+    background: #1565c0;
+    border: 1px solid #0d47a1;
+    border-radius: 999px;
+    box-shadow: 0 3px 12px rgba(21, 101, 192, 0.28);
+    user-select: none;
+  }
+  .corner-mark::before {
+    content: ""; width: 6px; height: 6px; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85); flex: none;
+  }
+  @media (max-width: 640px) {
+    body { padding-top: 52px; }
+    .corner-mark { top: 10px; left: 10px; padding: 4px 10px 4px 8px; font-size: 11px; letter-spacing: 2px; }
+  }
 </style>
 </head>
 <body>
+  <div class="corner-mark">陈辉出品</div>
   <h1>恶性肿瘤生存期影响因素 · 同心圆分块图</h1>
   <div class="subtitle">以病人为圆心，由内向外：家庭 → 医护 → 医院 → 医保 → 政府 → 地域，每环按影响因素切分为扇区</div>
 
